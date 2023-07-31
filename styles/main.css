@@ -147,6 +147,17 @@ footer>#copyright {
     text-align: center;
 }
 
+footer>#copyright>a {
+    color: var(--background);
+    padding: 0.1em;
+    border-radius: .1em;
+    transition: all 0.25s ease;
+}
+
+footer>#copyright>a:hover {
+    background: var(--background);
+    color: var(--color);
+}
 footer>#links {
     flex: 1;
 }
@@ -184,6 +195,10 @@ footer>#links>ul>li:hover>a {
 @media screen and (max-width: 640px) {
     footer {
         flex-direction: column;
+    }
+
+    footer>#copyright {
+        margin-bottom: 1em;
     }
 }
 
