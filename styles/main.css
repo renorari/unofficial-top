@@ -53,6 +53,7 @@ header>nav>ul>li {
 }
 
 header>nav>ul>li>a {
+    width: 100%;
     color: var(--background);
     text-decoration: none;
     transition: all 0.25s ease;
@@ -148,6 +149,7 @@ footer>#copyright {
 }
 
 footer>#copyright>a {
+    width: 100%;
     color: var(--background);
     padding: 0.1em;
     border-radius: .1em;
