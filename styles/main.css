@@ -12,6 +12,9 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -41,9 +44,9 @@ header>h1>a {
 }
 
 nav {
-        background: var(--color);
-            color: var(--background);
-            text-align: center;
+    background: var(--color);
+    color: var(--background);
+    text-align: center;
     padding: 0;
     position: sticky;
     position: -webkit-sticky;
@@ -152,14 +155,14 @@ main {
 footer {
     background: var(--color);
     color: var(--background);
-    position: absolute;
-    bottom: 0;
+    width: 100%;
+    margin-top: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 1em;
+    padding: 1em 0;
     overflow: hidden;
 }
 
@@ -224,6 +227,10 @@ footer>#links>ul>li:hover>a {
     footer>#copyright {
         margin-bottom: 1em;
     }
+
+    footer>#links>ul>li {
+        border-radius: 0;
+    }
 }
 
 .dev::before {
@@ -279,6 +286,7 @@ footer>#links>ul>li:hover>a {
         transform: translateX(-50%) translateY(0) scale(1.25);
     }
 }
+
 #top-image>h1:active {
     user-select: none;
     animation: boom 0.125s ease-out;
@@ -299,7 +307,7 @@ footer>#links>ul>li:hover>a {
 }
 
 #top-image>.scrollme:hover {
-    animation: scroll 1s infinite ease-in-out,rainbow 4s infinite ease-in-out;
+    animation: scroll 1s infinite ease-in-out, rainbow 4s infinite ease-in-out;
     animation-play-state: paused, running;
 }
 
@@ -344,7 +352,7 @@ footer>#links>ul>li:hover>a {
 #projects {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
