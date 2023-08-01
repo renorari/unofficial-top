@@ -16,21 +16,37 @@
     <title>Unofficialへようこそ</title>
 
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <style>
+        footer {
+            position: static;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="top-image">
+        <h1>Unofficial</h1>
+        <span>services for student</span>
+        <span class="material-symbols-rounded scrollme">
+            expand_more
+        </span>
+    </div>
+
     <header>
         <h1>
             <a href="/index.html">Unofficial</a>
         </h1>
-        <nav>
-            <ul>
-                <li><a href="/index.html">ホーム</a></li>
-                <li><a href="/pages/about.html">Unofficialとは</a></li>
-                <li><a href="//forums.unofficial.one/">Forums</a></li>
-            </ul>
-        </nav>
     </header>
+    <nav>
+        <ul>
+            <li><a href="/index.html">ホーム</a></li>
+            <li><a href="/pages/about.html">Unofficialとは</a></li>
+            <li><a href="//forums.unofficial.one/">Forums</a></li>
+        </ul>
+    </nav>
 
     <main>
         <div class="container">
@@ -43,14 +59,32 @@
             </div>
         </div>
         <div class="container">
-            <h2>サービス一覧</h2>
-            <div class="content">
-                <p>
-                    Unofficialでは、以下のサービスを提供しています。
-                </p>
-                <ul>
-                    <li><a href="//forums.unofficial.one/">Forums</a></li>
-                    <li><a href="//kakomon.unofficial.one/" class="dev">Kakomon</a></li>
+            <h2>Unofficial Projects</h2>
+            <div class="content" id="projects">
+                <div class="project">
+                    <a href="//forums.unofficial.one/">
+                        <img src="/images/forums.svg" alt="Unofficial Forums">
+                        <h3>
+                            Forums
+                        </h3>
+                    </a>
+                    <p class="description">
+                        Unofficial Forumsは、Unofficialのコミュニティフォーラムです。<br>
+                        ここでは、非公式な話をすることができます。
+                    </p>
+                </div>
+                <div class="project">
+                    <a href="//kakomon.unofficial.one/">
+                        <!-- <img src="/images/kakomon.svg" alt="Unofficial Kakomon"> -->
+                        <h3>
+                            Kakomon
+                        </h3>
+                    </a>
+                    <p class="description">
+                        Unofficial Kakomonは、Unofficialの過去問共有サービスです。<br>
+                        ここでは、過去問を共有することができます。
+                    </p>
+                </div>
             </div>
         </div>
     </main>

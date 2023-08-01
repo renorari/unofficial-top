@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;900&display=swap');
+
 :root {
     --background: rgb(250, 250, 250);
     --color: rgb(16, 16, 16);
@@ -5,12 +7,16 @@
     --link: rgb(32, 96, 255);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     background: var(--background);
     color: var(--color);
-    overflow-wrap: break-word;
 }
 
 a {
@@ -34,11 +40,17 @@ header>h1>a {
     text-decoration: none;
 }
 
-header>nav {
+nav {
+        background: var(--color);
+            color: var(--background);
+            text-align: center;
     padding: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
 }
 
-header>nav>ul {
+nav>ul {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -46,32 +58,36 @@ header>nav>ul {
     padding: 0;
 }
 
-header>nav>ul>li {
+nav>ul>li {
     margin: 0;
     padding: 0 1em;
     transition: all 0.25s ease;
 }
 
-header>nav>ul>li>a {
+nav>ul>li>a {
     color: var(--background);
     text-decoration: none;
     transition: all 0.25s ease;
 }
 
-header>nav>ul>li:hover {
+nav>ul>li:hover {
     background: var(--background);
 }
 
-header>nav>ul>li:hover>a {
+nav>ul>li:hover>a {
     color: var(--color);
 }
 
+main {
+    padding-bottom: 2em;
+}
+
 @media screen and (max-width: 640px) {
-    header>nav>ul {
+    nav>ul {
         flex-direction: column;
     }
 
-    header>nav>ul>li>a {
+    nav>ul>li>a {
         width: 100%;
         display: inline-block;
     }
@@ -83,15 +99,15 @@ header>nav>ul>li:hover>a {
 }
 
 @media screen and (min-width: 640px) {
-    header>nav>ul>li {
+    nav>ul>li {
         border-radius: .5em .5em 0 0;
     }
 
-    header>nav>ul>li:hover {
+    nav>ul>li:hover {
         border-radius: .5em .5em 0 0;
     }
 
-    header>nav>ul>li:hover>a {
+    nav>ul>li:hover>a {
         padding: 0 1em;
     }
 }
@@ -104,7 +120,7 @@ header>nav>ul>li:hover>a {
 }
 
 @media screen and (min-width: 1024px) {
-    header>nav>ul>li {
+    nav>ul>li {
         padding: 0 2em;
     }
 
@@ -136,7 +152,6 @@ header>nav>ul>li:hover>a {
 footer {
     background: var(--color);
     color: var(--background);
-    width: 100%;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -214,4 +229,180 @@ footer>#links>ul>li:hover>a {
 .dev::before {
     content: "👨‍💻開発中";
     margin-right: 0.25em;
+}
+
+#top-image {
+    width: 100vw;
+    height: 100vh;
+    background: var(--color);
+    color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#top-image>h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 5em;
+    font-weight: 900;
+}
+
+#top-image>span {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+#top-image>.scrollme {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5em;
+    animation: scroll 1s infinite ease-in-out;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-50%) translateY(0) scale(1.25);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(1rem) scale(1);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0) scale(1.25);
+    }
+}
+#top-image>h1:active {
+    user-select: none;
+    animation: boom 0.125s ease-out;
+}
+
+@keyframes boom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#top-image>.scrollme:hover {
+    animation: scroll 1s infinite ease-in-out,rainbow 4s infinite ease-in-out;
+    animation-play-state: paused, running;
+}
+
+@keyframes rainbow {
+    0% {
+        color: hsl(0, 100%, 75%);
+    }
+
+    15% {
+        color: hsl(30, 100%, 75%);
+    }
+
+    30% {
+        color: hsl(60, 100%, 75%);
+    }
+
+    45% {
+        color: hsl(120, 100%, 75%);
+    }
+
+    60% {
+        color: hsl(240, 100%, 75%);
+    }
+
+    75% {
+        color: hsl(275, 100%, 50%);
+    }
+
+    90% {
+        color: hsl(274, 100%, 75%);
+    }
+
+    100% {
+        color: hsl(0, 100%, 75%);
+    }
+}
+
+.material-symbols-rounded {
+    user-select: none;
+}
+
+#projects {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+#projects>.project {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0.5em;
+    border-radius: .5em;
+    border: solid 1px var(--color-translucent);
+    overflow: hidden;
+}
+
+#projects>.project h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#projects>.project>a {
+    color: var(--color);
+    text-decoration: none;
+}
+
+#projects>.project>a:hover {
+    color: var(--link);
+}
+
+#projects>.project img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#projects>.project>.description {
+    margin: 1em;
+    padding: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+    #projects>.project {
+        min-width: 100%;
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    #projects>.project {
+        min-width: calc(50% - 1em);
+        flex: 1;
+    }
 }
