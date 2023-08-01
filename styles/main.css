@@ -272,7 +272,7 @@ footer>#links>ul>li:hover>a {
 #top-image>.scrollme {
     position: absolute;
     bottom: 5rem;
-    left: 50%;
+    left: 50vw;
     transform: translateX(-50%);
     font-size: 2.5em;
     animation: scroll 1s infinite ease-in-out;
